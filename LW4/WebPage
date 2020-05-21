@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8"/>
-  <title>myPage</title>
-</head>
-<body>
-<h1>Страница с информацией об Артеме</h1>
-<p align="left"><a href="https://vk.com/yalublylinux"><img src="" width="300" height="400"></a></p>
-<p align="right">
-  Я Артем, сделал эту страницу 13 числа 03 месяца 2020 года в NPP.
-  Здесь присутствует информация о содержимом этой страницы. На этой 
-  странице моя фотография и увлечения вне учебы. Всё будет оформлено в 
-  виде текстовых блоках, абзацев, нумерованых и маркированых списков,
-  а так же фотография, которая сделана ссылкой на мой ВК.  
-</p>
-<p></p>
-<p></p>
-Мои увлечения кроме учебы:
-<ul>
-  <li>чтение</li>
-  <li>рисование</li>
-  <li>музыка</li>
-</ul>
+	<head>
+		<meta charset="utf-8"/>
+		<title>myPage</title>
+	</head>
+	<body>
+		<h1>Страница с информацией об Артеме</h1>
+		<p align="left"><a href="https://vk.com/yalublylinux"><img src="" width="300" height="400"></a></p>
+		<p align="right">
+		  Я Артем, сделал эту страницу 13 числа 03 месяца 2020 года в NPP.
+		  Здесь присутствует информация о содержимом этой страницы. На этой 
+		  странице моя фотография и увлечения вне учебы. Всё будет оформлено в 
+		  виде текстовых блоках, абзацев, нумерованых и маркированых списков,
+		  а так же фотография, которая сделана ссылкой на мой ВК.  
+		</p>
+		
+		Мои увлечения кроме учебы:
+		<ul>
+			<li>чтение</li>
+			<li>рисование</li>
+			<li>музыка</li>
+		</ul>
 
- то же самое, но в нумерованом списке:
-<ul>
-  <li>чтение</li>
-  <li>рисование</li>
-  <li>музыка</li>
-</ul>
-
-</body>
+		 то же самое, но в нумерованом списке:
+		<ul>
+			<li>чтение</li>
+			<li>рисование</li>
+			<li>музыка</li>
+		</ul>
+		<hr>
+		<form method="GET" class="form">
+			<label for="your_name" class="form_text form_text_required">Ваше имя</label>
+			<input type="text" id="your_name" name="your_name" required class="field name_field input_text all_fields"/><br/>
+			<label for="email" class="form_text form_text_required">Ваш email</label>
+			<input type="email" id="email" name="email" required class="field email_field input_text all_fields"/><br/>
+			<label for="country" class="form_text">Откуда вы?</label>
+			<select name="country" id="country" class="country_field all_fields">
+				<option value="__" class="input_text">  </option>
+				<option value="rus" class="input_text">Россия</option>
+				<option value="uk" class="input_text">Украина</option>
+				<option value="by" class="input_text">Беларусь</option>
+				<option value="eng" class="input_text">Великобритания</option>
+				<option value="fr" class="input_text">Франция</option>
+				<option value="ger" class="input_text">Германия</option>
+				<option value="usa" class="input_text">США</option>
+			</select><br/>
+			<p class="form_text gender_margin">Ваш пол</p> 
+			<input type="radio" id="male" class="gender_radio" name="gender" value="male" checked>
+			<label for="male" class="gender">Мужской</label>
+			<input type="radio" id="female" class="gender_radio gender_radio_female" name="gender" value="female">
+			<label for="female" class="gender">Женский</label>
+			<input type="radio" id="Yes" class="gender_radio gender_radio_female" name="gender" value="Yes">
+			<label for="Yes" class="gender">Да</label><br/>
+			<label for="message" class="form_text message_margin form_text_required" cols=>Ваше сообщение</label>
+			<textarea name="message" required id="message" class="message input_text all_fields"></textarea>
+			<input type="submit" value="Отправить" class="submit">
+		</form>
+	</body>
 </html>
