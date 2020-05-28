@@ -17,7 +17,7 @@ function isPrimeNumber(n) {
     for (let i in n) {
       isPrime = true;
       if (n[i] > 1) {
-        for (let j = 2; j < n[i]; j++) {
+        for (let j = 2; j < n[i / 2]; j++) {
           if (n[i] % j == 0) {
             isPrime = false;
             break;
