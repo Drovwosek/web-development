@@ -1,4 +1,4 @@
-PROGRAM PaulRevere(INPUT,OUTPUT);
+PROGRAM PaulRevere(INPUT, OUTPUT);
 USES
   DOS;
 
@@ -16,7 +16,7 @@ BEGIN {PaulRevere}
     BEGIN
       IF (Query[I] = '=')
       THEN
-        Lanterns := Query[I + 1];
+        Lanterns := Query[I + 1]
     END;
   {Issue Paul Revere's message}
   IF (Lanterns > '0') AND (Lanterns < '3')
