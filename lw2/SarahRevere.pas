@@ -29,5 +29,5 @@ BEGIN {PaulRevere}
     THEN
       WRITELN('sea.')
   ELSE
-    WRITELN('The North Church shows only ''', Lanterns, '''.');
+    WRITELN('The North Church shows only ''', Lanterns, '''.')
 END. {PaulRevere}
