@@ -2,7 +2,6 @@
 //$str = preg_replace('/\s+/', ' ', $str);
 //echo ($str);
 
-<?php
 header("Content-Type: text/plain");
 $inputText = getQueryStringParameter('text');
 if ($inputText === '')
