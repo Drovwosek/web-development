@@ -24,7 +24,7 @@ function checkIndentifier(string $identifier)
     {
         for ($i = 0; $i < strlen($identifier); $i++)
         {
-            if (!is_numeric($identifier[$i]) || !ctype_alpha($identifier[$i]))
+            if (!is_numeric($identifier[$i]) && !ctype_alpha($identifier[$i]))
             {
                 echo 'it is cant be in identifier ' . "'" . $identifier[$i] . "'.\n";
                 $hasErrors = true;
