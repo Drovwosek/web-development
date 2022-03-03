@@ -3,7 +3,7 @@ header("Content-Type: text/plain");
 
 function getQueryStringParameter(string $name): ?string
 {
-    return isset($_GET[$name]);  //? $_GET[$name] : null;
+    return $_GET[$name] ?? null;
 }
 
 $inputText = getQueryStringParameter('identifier');
@@ -19,7 +19,7 @@ else
 
 function checkIndentifier(string $identifier)
 {
-    $hasErrors = false;
+    $errors = false;
     if (!is_numeric($identifier[0]))
     {
         for ($i = 0; $i < strlen($identifier); $i++)
@@ -27,14 +27,14 @@ function checkIndentifier(string $identifier)
             if (!is_numeric($identifier[$i]) && !ctype_alpha($identifier[$i]))
             {
                 echo 'it is cant be in identifier ' . "'" . $identifier[$i] . "'.\n";
-                $hasErrors = true;
+                $errors = true;
             }
         }
     }
     else
     {
         echo "identifier cant start from number.\n";
-        $hasErrors = true;
+        $errors = true;
     }
-    echo $hasErrors ? 'no' : 'yes';
+    echo $errors ? 'no' : 'yes';
 }
