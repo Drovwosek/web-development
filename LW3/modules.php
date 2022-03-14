@@ -4,6 +4,7 @@ function getQueryStringParameter(string $name): ?string
     return $_GET[$name] ?? null;
 }
 
+<<<<<<< HEAD
 function removeExtraBlanks(string $text): ?string
 {
     $resultString = '';
@@ -26,3 +27,5 @@ function removeExtraBlanks(string $text): ?string
     }
     return $resultString;
 }
+=======
+>>>>>>> origin/master
