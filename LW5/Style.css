@@ -6,12 +6,12 @@ body
     margin: 0;
 }
 
-.heading-highlight
+.heading__highlight
 {
     color: #ee58b6;
 }
 
-.nav-bar
+.nav__bar
 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -20,7 +20,7 @@ body
     line-height: 20px;
 }
 
-.sign-up-button
+.sign__up_button
 {
     background-color: #05090c;
     border: none;
@@ -33,12 +33,12 @@ body
     font-size: 16px;
     line-height: 16px;
     cursor: pointer;
-    width: 247px;
+    width: 332px;
     height: 55px;
     border-radius: 5px;
 }
 
-.welcome-header
+.welcome__header
 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -47,42 +47,55 @@ body
     line-height: 122.35%;
 }
 
-.welcome-desc
+.welcome__desk
 {
     font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
-    line-height: 120%;
+    line-height: 20%;
     color: rgba(0, 0, 0, 0.7);
 }
 
-.welcome-img
+.welcome__img
 {
     width: 849px;
     height: 849px;
 }
 
-.benefits-block
+.benefits__block
 {
     background-color: black;
     align-content: center;
 }
 
-.benefits-card
+.benefits__card
 {
     display: flex;
     flex-direction: column;
     width: 337px;
 }
 
-.benefits-card-img
+.benefits__card_img
 {
     object-fit: none;
     align-self: center;
 }
 
-.benefits-card-text
+.benefits__card_left
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    text-align: center;
+    color: white;
+    width: 303px;
+    heigh: 80px;
+}
+
+.benefits__card_center
 {
     font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;
@@ -92,29 +105,43 @@ body
     text-align: center;
     color: white;
     width: 337px;
+    heigh: 52px;
 }
 
-.content-header
+.benefits__card_right
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 120%;
+    text-align: center;
+    color: white;
+    width: 337.95px;
+    heigh: 52px;
+}
+
+.content__header
 {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
-    line-height: 126.06%;
+    line-height: 126.23%;
     color: black;
 }
 
-.content-desc
+.content__desk
 {
     font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 135%;
+    line-height: 30%;
     color: rgba(0, 0, 0, 0.7);
 }
 
-.content-table-card
+.content__table_card
 {
     border-radius: 7px;
     background-color: black;
@@ -126,7 +153,7 @@ body
     justify-content: space-between;
 }
 
-.content-table-card-text
+.content___table__card_text
 {
     font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;
@@ -134,15 +161,16 @@ body
     font-size: 18px;
     line-height: 21px;
     color: white;
+    margin-top: 50px;
 }
 
-.content-table-card-img
+.content___table__card_img
 {
     object-fit: none;
     align-self: start;
 }
 
-.bottom-section
+.bottom__section
 {
     vertical-align: middle;
     align-items: center;
