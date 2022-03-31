@@ -2,89 +2,153 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>СБЭУ чмонька</title>
-	<link rel="stylesheet" type="text/css" href="Style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/variables.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/position.css">
+	<title>Document</title>
 </head>
-<body>
-<div class="main">
-	<div class="header__section">
-		<img src="images/logo_header.svg" alt="Logo">
-		<div class="nav__bar">
-			<p>Что будет на курсе?</p>
-			<p>Вопросы</p>
-			<p>Автор</p>
-		</div>
-		<input type="button" class="sign__up_button" value="Записаться на курс">
-	</div>
+<body class="file-padding">
+<header class="header header-indent">
+	<img class="header__logo" src="./images/svg/logoBlack.svg" alt="logo">
+	<nav class="nav">
+		<ul class="nav__list">
+			<li class="nav__list-item">
+				<a class="nav__list-item-link">Что будет на курсе?</a>
+			</li>
 
-	<div class="welcome__section">
-		<h1 class="welcome__header">Не <span class="heading__highlight">делай</span> это</h1>
-		<p class="welcome__desk">Онлайн-курс для творческих людей, о том, как </p>
-		<p class="welcome__desk"> управлять своим временем</p>
-		<input type="button" class="sign__up_button" value="Записаться на курс" style="width: 332px; height: 55px;">
-		<div class="welcome__img">
-			<img src="images/done.png" alt="Done">
-		</div>
-	</div>
+			<li class="nav__list-item">
+				<a class="nav__list-item-link">Вопросы</a>
+			</li>
 
+			<li class="nav__list-item">
+				<a class="nav__list-item-link">Автор</a>
+			</li>
+		</ul>
+	</nav>
+	<button class="button">Записаться на курс</button>
+</header>
 
-	<div class="benefits__block">
-		<div class="benefits__card">
-			<img src="./images/time.svg" alt="Clock" class="benefits__card_img">
-			<p class="benefits__card_left">Для тех, у кого слишком много идей и слишком мало времени</p>
+<main class="main">
+	<section class="hero">
+		<div class="hero__text">
+			<h1 class="hero__text-header">Не <span class="pink">делай</span> это</h1>
+			<p class="hero__text-desc">Онлайн-курс для творческих людей, о том, как управлять своим временем </p>
+			<button class="button button-long">Записаться на курс</button>
 		</div>
-		<div class="benefits__card">
-			<img src="./images/notebook.svg" alt="Notebook" class="benefits__card_img">
-			<p class="benefits__card_center">Метод «списка не дел», который позволит успевать и реализовывать</p>
-		</div>
-		<div class="benefits__card">
-			<img src="./images/target.svg" alt="Target" class="benefits__card_img">
-			<p class="benefits__card_right">Курс научит творческих людей сосредоточиваться</p>
-		</div>
-	</div>
 
-	<div class="content__section">
-		<img src="./images/finances.png" alt="Finances">
-		<h2 class="content__header">Ты не успеешь</h2>
-		<p class="content__desk">Всех творческих людей объединяет одна проблема - отсутствие времени на</p>
-		<p class="content__desk">реализацию идей. Как прибавить суткам часы, рассмотрим в нашем курсе.</p>
-		<h2 class="content__header">Опять дедлайн</h2>
-		<p class="content__desk">В мире, где столько всего интересного, когда же успевать жить?</p>
-		<img src="./images/mind_blowing.png" alt="Mind Blowing">
+		<img class="hero__img" src="./images/hero.png" alt="закончил" />
+	</section>
 
-		<h2 class="content__header">На курсе ты <span class="heading__highlight">сможешь</span></h2>
-		<div class="content__table">
-			<div class="content__table_card">
-				<img src="./images/hand_1.svg" alt="One" class="content___table__card_img">
-				<p class="content___table__card_text">Понять, что нужно делать, а что делать не стоит.</p>
-			</div>
-			<div class="content__table_card">
-				<img src="./images/hand_2.svg" alt="Two" class="content___table__card_img">
-				<p class="content___table__card_text">Перестать себя искусственно ограничивать.</p>
-			</div>
-			<div class="content__table_card">
-				<img src="./images/hand_3.svg" alt="Three" class="content___table__card_img">
-				<p class="content___table__card_text">Определить сильные стороны
-					и начать использовать слабые.</p>
-			</div>
-			<div class="content__table_card">
-				<img src="./images/hand_4.svg" alt="Four" class="content___table__card_img">
-				<p class="content___table__card_text">Научиться достигать любой цели в 3 понятных шага.</p>
-			</div>
-			<div class="content__table_card">
-				<img src="./images/hand_5.svg" alt="Five" class="content___table__card_img">
-				<p class="content___table__card_text">Сотрудничать эффективно и с правильными людьми.</p>
-			</div>
-			<div class="content__table_card">
-				<img src="./images/hand_6.svg" alt="Six" class="content___table__card_img">
-				<p class="content__table__card_text">Оптимизировать общение с клиентами и проведение совещаний.</p>
+	<section class="info">
+		<ul class="info__list">
+			<li class="info__list-item info__list-item_first">
+				<img  class="info__list-item-icon" src="./images/svg/time.svg" alt="time"/>
+				<p class="info__list-item-text">
+					Для тех, у кого слишком много идей и слишком мало времени
+				</p>
+			</li>
+
+			<li class="info__list-item info__list-item_second">
+				<img class="info__list-item-icon" src="./images/svg/notebook.svg" alt="notebook"/>
+				<p class="info__list-item-text">
+					Метод «списка не дел», который позволит успевать и реализовывать
+				</p>
+			</li>
+
+			<li class="info__list-item">
+				<img class="info__list-item-icon" src="./images/svg/target.svg" alt="target">
+				<p class="info__list-item-text">
+					Курс научит творческих людей сосредоточиваться
+				</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="cant-do">
+		<div class="cant-do__row-first">
+			<img class="cant-do__row-first-img"src="./images/finances.png" alt="финансы" />
+
+			<div class="cant-do__row-first-desc">
+				<h3 class="cant-do__row-desc-header">
+					Ты не успеешь
+				</h3>
+
+				<p class="cant-do__row-desc-text">
+					Всех творческих людей объединяет одна проблема - отсутствие времени на реализацию идей. Как прибавить суткам часы, рассмотрим в нашем курсе.
+				</p>
 			</div>
 		</div>
-	</div>
 
-	<div class="bottom__section">
-		<img src="images/logo_bottom.svg" alt="Logo">
-	</div>
-</div>
+		<div class="cant-do__row-second">
+			<div class="cant-do__row-second-desc">
+				<h3 class="cant-do__row-desc-header">
+					Опять дедлайн
+				</h3>
+
+				<p class="cant-do__row-desc-text">
+					В мире, где столько всего интересного, когда же успевать жить?
+				</p>
+			</div>
+
+			<div class="cant-do__row-img">
+				<img src="./images/mindBlowing.png" alt="взрыв мозга" />
+			</div>
+		</div>
+	</section>
+
+	<section class="about">
+		<h2 class="about__header">На курсе ты <span class="pink">сможешь</span></h2>
+
+		<ul class="about__list">
+			<li class="about_list-item">
+				<img class="about_list-item-img" src="./images/svg/oneFingersUp.svg" alt="oneFingersUp"/>
+				<p class="about_list-item-text">
+					Понять, что нужно делать, а что делать не стоит.
+				</p>
+			</li>
+
+			<li class="about_list-item">
+				<img class="about_list-item-img" src="./images/svg/twoFingersUp.svg" alt="twoFingersUp"/>
+				<p class="about_list-item-text">
+					Перестать себя искусственно ограничивать.
+				</p>
+			</li>
+
+			<li class="about_list-item">
+				<img class="about_list-item-img" src="./images/svg/threeFingersUpRight.svg" alt="threeFingersUpRight"/>
+				<p class="about_list-item-text">
+					Определить сильные стороны и начать использовать слабые.
+				</p>
+			</li>
+
+			<li class="about_list-item">
+				<img class="about_list-item-img" src="./images/svg/fourFingerUp.svg" alt="fourFingerUp" />
+				<p class="about_list-item-text">
+					Научиться достигать любой цели в 3 понятных шага.
+				</p>
+			</li>
+
+			<li class="about_list-item">
+				<img class="about_list-item-img" src="./images/svg/fiveFingersUp.svg" alt="fiveFingersUp" />
+				<p class="about_list-item-text">
+					Сотрудничать эффективно и с правильными людьми.
+				</p>
+			</li>
+
+			<li class="about_list-item">
+				<img class="about_list-item-img" src="./images/svg/threeFingersUpMiddle.svg" alt="threeFingersUpMiddle" />
+				<p class="about_list-item-text">
+					Оптимизировать общение с клиентами и проведение совещаний.
+				</p>
+			</li>
+		</ul>
+	</section>
+</main>
+
+<footer class="footer">
+	<img src="./images/svg/logoWhite.svg" alt="logo">
+</footer>
 </body>
 </html>
