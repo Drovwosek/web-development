@@ -1,33 +1,42 @@
 <?php
-header("Content-Type: text/plain");
-require_once('modules.php');
 
-$mail = getQueryStringParameter('mail');
-$first_name = getQueryStringParameter('first_name');
-$last_name = getQueryStringParameter('last_name');
-$age = getQueryStringParameter('age');
+$_SERVER['QUERY_STRING'];
+$firstName = $_GET['first_name'];
+$lastName = $_GET['last_name'];
+$email = $_GET['email'];
+$age = $_GET['age'];
 
-if ($mail !== null || strlen($mail) > 0)
+$email .= ".txt";
+if (strlen($email) - 4 != 0)
 {
-    $file = 'data/' . $mail . '.txt';
-    if (file_exists('data/'))
-    {
-        mkdir('data/', 0777, true);
-    }
-    $info = array
-    (
-        'mail' => $mail,
-        'first_name' => $first_name,
-        'last_name' => $last_name,
-        'age' => $age
-    );
-    $info = serialize($info);
-    file_put_contents( $file, $info);
-    echo'инфа за щекой, проверяй ';
-    echo $info;
-
+	if (file_exists($email))
+	{
+		$tempArray = file($email);
+		if (!(empty($firstName)))
+		{
+			$tempArray[0] = "First Name: " . $firstName . "\n";
+		}
+		if (!(empty($lastName)))
+		{
+			$tempArray[1] = "Last Name: " . $lastName . "\n";
+		}
+		if (!(empty($email)))
+		{
+			$tempArray[2] = "Email: " . substr($email, 0, -4) . "\n";
+		}
+		if (!(empty($age)))
+		{
+			$tempArray[3] = "Age: " . $age;
+		}
+		file_put_contents($email, $tempArray);
+	} else
+	{
+		$userTxt = fopen($email, "w");
+		fwrite($userTxt, "First Name: " . $firstName . "\n");
+		fwrite($userTxt, "Last Name: " . $lastName . "\n");
+		fwrite($userTxt, "Email: " . substr($email, 0, -4) . "\n");
+		fwrite($userTxt, "Age: " . $age);
+		fclose($userTxt);
+	}
 }
-else
-{
-    echo'RODIPIT';
-}
+?>
