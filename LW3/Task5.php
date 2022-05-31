@@ -1,15 +1,29 @@
 <?php
-
-$_SERVER['QUERY_STRING'];
-$email = $_GET['email'];
-
-$email .= ".txt";
-if ((file_exists($email)) and (strlen($email) >= 5))
+header("Content-Type: text/plain");
+function getQueryStringParameter(string $name): ?string
 {
-	$tempArray = file($email);
-	for ($i = 0; $i <= 4; $i++)
-	{
-		echo $tempArray[$i] . "<br />";
-	}
+    return isset($_GET[$name]) ? $_GET[$name] : null;
 }
-?>
+$email = getQueryStringParameter('email');
+if ($email !== null)
+{
+    $path = "./data/" . $email . ".txt";
+    if (file_exists($path))
+    {
+        $myFile = fopen($path, "r");
+        $firstName = fgets($myFile);
+        $lastName = fgets($myFile);
+        $email = fgets($myFile);
+        $age = fgets($myFile);
+        echo $firstName . $lastName . $email . $age;
+        fclose($myFile);
+    }
+    else
+    {
+        echo "no such file or directory";
+    }
+}
+else
+{
+    echo "have not email!";
+}
