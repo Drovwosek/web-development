@@ -1,33 +1,39 @@
 <?php
 header("Content-Type: text/plain");
-require_once('modules.php');
-
-$mail = getQueryStringParameter('mail');
-$first_name = getQueryStringParameter('first_name');
-$last_name = getQueryStringParameter('last_name');
-$age = getQueryStringParameter('age');
-
-if ($mail !== null || strlen($mail) > 0)
+function getQueryStringParameter(string $name): ?string
 {
-    $file = 'data/' . $mail . '.txt';
-    if (file_exists('data/'))
-    {
-        mkdir('data/', 0777, true);
-    }
-    $info = array
-    (
-        'mail' => $mail,
-        'first_name' => $first_name,
-        'last_name' => $last_name,
-        'age' => $age
-    );
-    $info = serialize($info);
-    file_put_contents( $file, $info);
-    echo'инфа за щекой, проверяй ';
-    echo $info;
+    return isset($_GET[$name]) ? $_GET[$name] : null;
+}
 
+$firstName = getQueryStringParameter('first_name');
+$lastName = getQueryStringParameter('last_name');
+$age = getQueryStringParameter('age');
+$email = getQueryStringParameter('email');
+
+if ($email)
+{
+    $path = "./data/" . $email . ".txt";
+    if (file_exists($path))
+    {
+        $myFile = fopen($path, "r");
+        getSubstringInFile(file($path));
+        fclose($myFile);  
+    }
+    $myFile = fopen($path, "w");
+    $somecontent = "First Name:" . $firstName . "\nLast Name:" . $lastName . "\nEmail:" . $email . "\nAge:" . $age;
+    fwrite($myFile, $somecontent);
+    fclose($myFile);
 }
 else
 {
-    echo'RODIPIT';
+    echo 'have not email!'; 
+}
+
+function getSubstringInFile(array $arrayStrings): ?string
+{ 
+    global $firstName, $lastName, $age;
+    $firstName = $firstName ?? trim(substr($arrayStrings[0], strpos($arrayStrings[0], ':') + 1));
+    $lastName = $lastName ?? trim(substr($arrayStrings[1], strpos($arrayStrings[1], ':') + 1));
+    $age = $age ?? trim(substr($arrayStrings[3], strpos($arrayStrings[3], ':') + 1)); 
+    return '1';
 }
