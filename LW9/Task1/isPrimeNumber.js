@@ -16,7 +16,7 @@ function isPrimeNumber(i) {
             console.log(`${i} is not prime number`);
         }
     } else {
-        if (typeof i === 'object') { //проверка на массива с array.isArray в объект можно засунуть object
+        if (typeof i === 'object') { //здесь объект это асс массив с различнвм типом (в объект можно засунуть object)
             for (let j in i) {
                 isPrimeNumber(i[j])
             }
