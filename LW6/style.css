@@ -1,0 +1,276 @@
+body
+{
+  margin: 0px;
+  max-width: 1920px;
+}
+
+.header
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.review
+{
+    max-width: 100%;
+}
+
+.review__image-dont
+{ 
+    margin: 38px 0px 0px 120px;
+    max-width: 100%;
+}
+
+.links
+{
+    display: inline;
+    margin: 48px 0px 0px 662px;
+    align-items: flex-end;
+}
+
+.links__link-review
+{
+    margin: 0px 87px 0px 0px;
+    font: 500 16px 'Montserrat';
+    line-height: 20px;
+    color: #000;
+}
+
+.review__target
+{
+    align-items: flex-end;
+    margin: 30px 0px 0px 12px;
+    width: 247px;
+    height: 55px;
+    background: #05090C;
+    border-radius: 5px;
+    font: 600 16px 'Montserrat';
+    line-height: 16px;
+    text-align: center;
+    color: #FFF;
+    border: none;
+}
+
+.main
+{   
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 732px;
+    margin: 43px 205px 65px 178px;
+}
+
+.main__title
+{
+    margin: 220px 0px 0px 0px;
+    display: inline;
+    max-width: 100%;
+    font: 600 100px 'Montserrat';
+    line-height: 123%;
+    color: #000;
+}
+
+.main__title_focus
+{
+    color: #EE58B6;    
+}
+
+.main__subtitle
+{
+    margin: 5px 0px 0px 0px;
+    max-width: 545px;
+    font: 400 26px 'Roboto Condensed';
+    line-height: 120%;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.main__target
+{
+    margin: 46px 0px 0px 0px;
+    width: 332px;
+    height: 55px;
+    background: #05090C;
+    border-radius: 4.59px;
+    font: 600 16px 'Montserrat';
+    line-height: 16px;
+    text-align: center;
+    color: #FFF;
+    border: none;
+}
+
+.main__image-done
+{
+    margin: 75px 0px 0px 30px;
+    max-width: 100%;
+}
+
+.description
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1138px;;
+    max-height: 398px;
+    padding: 111px 391px 155px 391px;
+    background: #000;
+}
+.description__section
+{
+    max-width: 337px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description__image
+{
+    max-width: 52px;
+    margin: 0px 0px 25px 0px;
+}
+
+.description__text
+{
+    max-width: 337px;
+    font: 400 22px 'Roboto Condensed';
+    line-height: 120%;
+    text-align: center;
+    color: #FFF;
+}
+
+.article-reasons
+{
+    margin: 72px 391px 0px 393px;
+    display: flex;
+    max-width: 1136px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article-reasons__text
+{
+    margin: 50px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article-reasons__title
+{ 
+    margin: 0px 0px 26px 0px;
+    max-width: 386px;
+    font: 500 48px 'Montserrat';
+    line-height: 126%;
+    color: #000;
+}
+
+.article-reasons__subtitle
+{
+    margin: 0px;
+    max-width: 574px;
+    font: 400 18px 'Roboto Condensed';
+    line-height: 135%;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.article-reasons__image-finances
+{
+    margin: 100px 0px 15px 0px;
+    max-width: 100%;
+}
+
+.article-reasons__image-mind
+{
+    margin: 34px 102px 35px 25px;
+    max-width: 100%;
+    order: 1;
+}
+
+.article-opportunities
+{ 
+    margin: 135px 393px 288px 393px;
+    max-width: 1135px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.article-opportunities__title
+{
+    margin: 0px 0px 61px 0px;
+    max-width: 553px;
+    font: 500 48px 'Montserrat';
+    line-height: 59px;
+    text-align: center;
+    color: #000;
+}
+
+.article-opportunities__title_focus
+{
+    color: #EE58B6;
+}
+
+.tickets
+{
+    max-width: 1135px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ticket
+{
+    margin: 0px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 358px;
+    height: 190px;
+    background: #000;
+    border-radius: 7px;
+}
+
+.ticket__text
+{
+    max-width: 286px;
+    height: 52px;
+    font: 400 18px 'Roboto Condensed';
+    line-height: 21px;
+    color: #FFF;
+}
+
+.ticket__image
+{
+    margin: 0px 0px 21px 0px;
+    max-width: 50px;
+}
+
+.footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 108px;
+    background: #000;
+}
+
+.footer__content
+{
+    max-width: 203px;
+    height: 48px;
+}
+
+.footer__text
+{
+    margin: 0px 0px 30px 0px;
+    max-width: 203px;
+    font: 700 31px 'Montserrat';
+    line-height: 123%;
+    color: #FFF;
+}
+
+.footer__text_focus
+{
+    color: #EE58B6;
+}
